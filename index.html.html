@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--IE8버전에서 호환성 보기 버튼 클릭시, 웹표준을 지키지 않던 구 브라우저의 렌더링 방식인 관용모드로 작동-->
+    <!--최신 모드로 지정된 DOCTYPE에 상관없이 IE8이상 버전에서 항상 최신 표준모드로 렌더링됨(관용모드로 렌더링 안함)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형템플릿코딩</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <!--파비콘(FAVprotes ICON) : .ico .png-->
+    <link rel="shortcut icon" href="images/favicon/nike.png">
+    <!--터치 아이콘 : 모바일 디바이스로 사이트 접속 후 홈화면에 추가시 생기는 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/touchfav.png">
+    <!--박스슬라이더 CSS삽입-->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/template.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(function(){
+            $('.slider_img').bxSlider({
+                auto:true,
+                autoHover:true,
+                mode:'horizontal',
+                speed:300,
+                pause:2000,
+                pager:true,
+                slideWidth:1920
+            });
+            $('.menu_toggle_btn').click(function(){
+               $('.gnb').stop().fadeToggle('fast');
+            })
+        });
+    </script>
+</head>
+<body>
+     <!--#wrap>header.header+article.slider+section.content+footer.footer-->
+     <div id="wrap">
+        <!--1. 헤더영역 시작-->
+         <header class="header cf">
+            <!--로고시작-->
+             <h1 class="logo">
+                 <a href="#">
+                     <img src="images/favicon/logo.png" alt="">
+                 </a>
+             </h1>
+            <!--로고끝-->
+            <!--GNB메뉴  시작-->
+            <nav>
+                <!--ul>(li>a[href=#]{MENU$})*5-->
+                <ul class="gnb">
+                    <li><a href="#">New&nbsp;Releases</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">SALE</a></li>
+                </ul>
+     
+            </nav>
+            <!--GNB메뉴  끝-->
+            
+            <!--모바일 햄버거 메뉴시작-->
+            <span class="menu_toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <!--모바일 햄버거 메뉴끝-->
+         </header>
+         <!--1. 헤더영역 끝-->
+         
+         <!--2. 슬라이드영역 시작-->
+         <article class="slider">
+             <ul class="slider_img">
+                 <li><img src="images/p_images/gdimg1.png" alt="슬라이드 이미지">
+                 <li><img src="images/p_images/gdimg2.png" alt="슬라이드이미지"></li>
+                 <li><img src="images/p_images/gdimg3.png" alt="슬라이드이미지"></li>
+                 <li><img src="images/p_images/gdimg4.png" alt="슬라이드이미지"></li>
+             </ul>
+         </article>
+         <!--2. 슬라이드영역 끝-->
+         
+         <!--3. 콘텐츠영역 시작-->
+         <section class="content">
+             <!--3-1. 디스플레이영역 시작-->
+             <!--section.display_section-->
+             <section class="display_section cf">
+                 <div>
+                     <h2 class="sec_title">GD &amp; NIKE</h2>
+                     <p class="desc">
+                         새롭게 만났다.<br> 
+                         특별한 기회를 놓치지 마세요.<br>
+                         응모로 미리 체험 혜택을 만나보세요.
+                     </p>
+                     
+                 </div>
+             </section>
+             <!--3-1. 디스플레이영역 끝-->
+             <!--3-2. 프로모션영역 시작-->
+             <section class="promotion_section">
+                 <div class="cf">
+                     <ul class="promotion_list">
+                         <li>
+                             <a href="#">
+                                 <img src="images/s_images/promo1.png" alt="home">
+                                 <h3>IDENITY</h3>
+                                 <p>
+                                     지금 보이는 대로.<br>
+                                     나의 정체성이 된다
+                                 </p>
+                             </a>
+                         </li>
+                         
+                          <li>
+                             <a href="#">
+                                 <img src="images/s_images/promo2.png" alt="weare">
+                                 <h3>UNIQUE</h3>
+                                 <p>
+                                     그 어디에도 없는<br>
+                                     오로지 나이키에만 존재한다.
+                                 </p>
+                             </a>
+                         </li>
+                         
+                          <li>
+                             <a href="#">
+                                 <img src="images/s_images/promo3.png" alt="promotion">
+                                 <h3>ONLY ONE</h3>
+                                 <p>
+                                     GD와의 콜라보레이션.<br>
+                                     한정판으로 만나보세요.
+                                 </p>
+                             </a>
+                         </li>
+                         
+                          <li>
+                             <a href="#">
+                                 <img src="images/s_images/promo4.png" alt="contact">
+                                 <h3>DESIGN</h3>
+                                 <p>
+                                     새로운 디자인으로<br>
+                                     새로운 경험을 해보세요.
+                                 </p>
+                             </a>
+                         </li>
+                     </ul>
+                 </div>
+             </section>
+             <!--3-2. 프로모션영역 끝-->
+             
+             <hr class="divider">
+             
+             <!--3-3. 포트폴리오영역 시작-->
+             <section class="work_section">
+                 <div>
+                     <h2 class="sec_title">WORK</h2>
+                     <ul class="work_list cf">
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>에어포스 1로우</h3>
+                                 <span>707,130원</span>
+                             </div>    
+                             <img src="images/p_images/work1.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>파라노이즈GD포스</h3>
+                                 <span>878,000</span>
+                             </div>    
+                             <img src="images/p_images/work2.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>파라노이즈2.0</h3>
+                                 <span>828,000원</span>
+                             </div>    
+                             <img src="images/p_images/work3.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>피스마이너스원 GD</h3>
+                                 <span>898,000원</span>
+                             </div>    
+                             <img src="images/p_images/work4.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>Nike Air Force1</h3>
+                                 <span>1,215,630원</span>
+                             </div>    
+                             <img src="images/p_images/work5.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>GDRAGON Mens 9</h3>
+                                 <span>1,313,910원</span>
+                             </div>    
+                             <img src="images/p_images/work6.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>Para-Noise2.0</h3>
+                                 <span>904,800원</span>
+                             </div>    
+                             <img src="images/p_images/work7.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                         <li>
+                            <a href="#">
+                             <div>
+                                 <h3>Para Noise 2.0 11</h3>
+                                 <span>836,730원</span>
+                             </div>    
+                             <img src="images/p_images/work8.png" alt="포트폴리오 현대웹사이트">
+                            </a>
+                         </li>
+                         
+                     </ul>
+                 </div>
+             </section>
+             <!--3-3. 포트폴리오영역 끝-->
+             
+             <hr class="m_divider">
+             
+             <!--3-4. 블로그영역 시작-->
+             <section class="blog_section">
+                 <div class="cf">
+                     <h2 class="sec_title">PEACEMINUS</h2>
+                     <ul class="blog_list cf">
+                        <li>
+                             <a href="#">
+                                 <img src="images/p_images/blog1.png" alt="블로그 이미지01">
+                             </a>
+                             <time datetime="220-12-23">Feb 10, 2021</time>
+                             <a href="#">
+                                 <h3>
+                                     피스 마이너스원의 상징은<br> 
+                                     데이지 꽃에는 꽃잎 한쪽이 떨어져 있다.
+                                 </h3>
+                             </a>
+                        </li>
+                        
+                        <li>
+                             <a href="#">
+                                 <img src="images/p_images/blog2.png" alt="블로그 이미지02">
+                             </a>
+                             <time datetime="220-12-23">Feb 10, 2021</time>
+                             <a href="#">
+                                 <h3>
+                                     시간이 흐르면서 움직임에 따라 벗겨지는<br> 
+                                     크랙 갑피를 사용했다는 것.
+                                 </h3>
+                             </a>
+                        </li>
+                        
+                        <li>
+                             <a href="#">
+                                 <img src="images/p_images/blog3.png" alt="블로그 이미지03">
+                             </a>
+                             <time datetime="220-12-23">Feb 10, 2021</time>
+                             <a href="#">
+                                 <h3>
+                                     현실에 안주하지 않고<br> 새로운 도전을 위해 뛰어라.
+                                 </h3>
+                             </a>
+                        </li>
+                     </ul>
+                 </div>
+             </section>
+             <!--3-4. 블로그영역 끝-->
+             <!--3-5. 연락처작업영역 시작-->
+             <section class="contact_section">
+                 <div class="cf">
+                     <h2 class="sec_title">CONTACT&nbsp;US</h2>
+                     <div>
+                         <form action="#" method="post" class="form_box">
+                             <fieldset class="cf">
+                                 <legend class="blind">CONTACT US</legend>
+                                 <!--input 폼 시작-->
+                                 <div class="form">
+                                     <label for="name" class="blind">Name</label>
+                                     <input type="text" id="name" placeholder="Name" required="required" autocomplete="off">
+                                     <label for="phone" class="blind">phone</label>
+                                     <input type="tel" id="phone" placeholder="Phone" required="required" autocomplete="off">
+                                     <label for="email" class="blind">E-mail</label>
+                                     <input type="email" id="email" required="required">
+                                 </div>
+                                 <!--input 폼 끝-->
+                                 
+                                 <!--textarea폼 시작-->
+                                 <div class="txta">
+                                     <label for="message" class="blind">Message</label>
+                                     <textarea id="message" placeholder="Message"></textarea>
+                                 </div>
+                                 <!--textarea폼 끝-->
+                             </fieldset>
+                             <!--버튼시작-->
+                             <div class="send_btn">
+                                 <button>
+                                     SEND MESSAGE
+                                 </button>
+                             </div>
+                             <!--버튼끝-->
+                         </form>
+                     </div>
+                 </div>
+             </section>
+             <!--3-5. 연락처작업영역 끝-->
+             
+         </section>
+         <!--3. 콘텐츠영역 끝-->
+         
+         <!--4. 푸터영역 시작-->
+         <footer class="footer">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.4543769198826!2d127.02050861418128!3d37.52078503450683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3eb6da7589b%3A0x12a0299d6b91faf1!2zQXBwbGUg6rCA66Gc7IiY6ri4!5e0!3m2!1sko!2skr!4v1608689681320!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+             <p>
+                 COPYRIGHT ALL GD &amp;NIKE.
+             </p>
+         </footer>
+         <!--4. 푸터영역 끝-->
+     </div>
+</body>
+</html>
